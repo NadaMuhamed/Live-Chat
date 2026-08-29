@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-
+import userRoutes from "./routs/user.js";
 dotenv.config({ path: "../../.env" });
 
 const { connectDB } = await import("./config/db.js");
@@ -10,7 +10,7 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 
 app.use(express.json());
-
+app.use("/api/v1", userRoutes);
 app.get("/", (req, res) => {
   res.send("Live Chat API is running");
 });
