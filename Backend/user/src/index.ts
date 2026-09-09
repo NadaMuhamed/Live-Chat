@@ -9,7 +9,7 @@ const { connectRedis } = await import("./config/redis.js");
 const { connectRabbitMQ } = await import("./config/rabbitmq.js");
 
 const app = express();
-const PORT = Number(process.env.PORT) || 3001;
+const PORT = Number(process.env.PORT1) || 3001;
 
 app.use(express.json());
 app.use("/api/v1", userRoutes);

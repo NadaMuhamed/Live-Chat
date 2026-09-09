@@ -3,6 +3,7 @@ import amqp, {
   type ChannelModel,
 } from "amqplib";
 
+
 let connection: ChannelModel | null = null;
 let channel: Channel | null = null;
 
@@ -40,4 +41,12 @@ export const getRabbitMQChannel = (): Channel => {
   }
 
   return channel;
+};
+
+export const publishToQueue = async (queue: string, message: any)=> {
+  if (!channel) {
+    throw new Error("RabbitMQ channel is not initialized");
+  }
+  await channel.assertQueue(queue, { durable: true });
+  channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), { persistent: true });
 };
