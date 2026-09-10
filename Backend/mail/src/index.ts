@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import { startSendOtpConsumer } from "./consumer.js";
 
 dotenv.config({ path: "../../.env" });
 
@@ -9,9 +10,11 @@ const PORT = Number(process.env.PORT2) || 3002;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Live Chat API is running");
+    res.send("Mail Service is running");
 });
 
+startSendOtpConsumer();
+
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Mail Service is running on port ${PORT}`);
 });
