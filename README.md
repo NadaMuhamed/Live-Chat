@@ -1,76 +1,56 @@
-# Live Chat – Microservices Backend
+# Live Chat
 
-A real-time chat backend built with a microservices architecture. This is a **learning project**: I am building it by following a video course while practicing the tools in it, and it is **still in progress**.
+A real-time chat application being developed as a learning project while
+following the course linked below.
 
-> **Course I'm following:** [Course video](https://www.youtube.com/watch?v=uosSnR_3MB8)
-> <!-- TODO: replace "Course video" with the real course title and the author's name -->
+## About the Project
 
-## Status
+This repository contains the source code for the **Live Chat** project.
+The application is currently a work in progress, and this README will be
+updated as the implementation develops.
 
-| Part | Status |
-| --- | --- |
-| Backend services | In progress |
-| Frontend | Not started yet |
+## Learning Resource
 
-## What I'm practicing
+-   **YouTube Course:** [Watch the
+    course](https://www.youtube.com/watch?v=uosSnR_3MB8)
 
-- **TypeScript** for the backend code
-- **Socket.IO** for real-time messaging
-- **OTP email authentication**
-- **RabbitMQ** for messaging between services
-- **Redis** for caching
-- **Docker** to containerize the services
+## Repository
 
-## Project structure
+-   **GitHub:**
+    [NadaMuhamed/Live-Chat](https://github.com/NadaMuhamed/Live-Chat)
 
-```
+## Project Structure
+
+``` text
 Live-Chat/
-└── Backend/        # microservices (in progress)
+├── Backend/
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-<!-- TODO: list each service inside Backend/ with one line about what it does -->
+-   `Backend/` --- backend project files.
+-   `.gitignore` --- files and folders excluded from Git.
+-   `package.json` --- root Node.js project metadata.
 
-## Getting started
+## Getting Started
 
-### Prerequisites
+Clone the repository:
 
-- Node.js (v18 or newer)
-- Docker and Docker Compose
-- <!-- TODO: add anything else the project needs (for example an email provider for OTP) -->
-
-### Run locally
-
-```bash
+``` bash
 git clone https://github.com/NadaMuhamed/Live-Chat.git
 cd Live-Chat
-npm install
 ```
 
-<!-- TODO: add the exact commands you use to start the services (docker compose up, npm run dev, ...) -->
+Backend installation and run commands will be added after confirming the
+dependencies and scripts configured inside the `Backend` folder.
 
-### Environment variables
+## Project Status
 
-Create a `.env` file (never commit it) based on `.env.example`:
+**In progress** --- this project is being built step by step while
+following the course.
 
-```
-# TODO: list the variable names only, without real values
-```
+------------------------------------------------------------------------
 
-## What I learned so far
-
-<!-- TODO: write 3 to 5 short lines in your own words, for example:
-- How services communicate through a message broker instead of calling each other directly
-- Why Redis is used for caching
-- How OTP authentication works
--->
-
-## Next steps
-
-- [ ] Finish the remaining backend parts
-- [ ] Add tests
-- [ ] Build a React frontend
-- [ ] Add API documentation
-
-## Credits
-
-The architecture and structure follow the course linked above. Any changes or additions I make on my own will be noted here.
+*This README will be expanded with the confirmed technology stack,
+implemented features, and setup instructions as the project progresses.*
